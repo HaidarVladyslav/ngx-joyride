@@ -5,7 +5,8 @@ import { JoyrideButtonComponent } from './button.component';
 
 @Component({
     selector: 'host',
-    template: '<joyride-button [color]="color" (clicked)="onClick()"></joyride-button>'
+    template: '<joyride-button [color]="color" (clicked)="onClick()"></joyride-button>',
+    standalone: false
 })
 class HostComponent {
     color: string;

@@ -3,7 +3,8 @@ import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 @Pipe({
-    name: 'joyTranslate'
+    name: 'joyTranslate',
+    standalone: false
 })
 export class JoyrideTranslatePipe implements PipeTransform {
     transform(value: any, ...args: any[]) {

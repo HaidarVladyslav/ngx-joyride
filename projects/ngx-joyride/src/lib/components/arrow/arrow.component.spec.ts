@@ -5,7 +5,8 @@ import { By } from '@angular/platform-browser';
 
 @Component({
     selector: 'host',
-    template: '<joyride-arrow [position]="pos"></joyride-arrow>'
+    template: '<joyride-arrow [position]="pos"></joyride-arrow>',
+    standalone: false
 })
 class HostComponent {
     pos: string;

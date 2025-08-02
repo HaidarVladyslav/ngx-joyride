@@ -15,7 +15,8 @@ import { TranslateService } from '@ngx-translate/core';
         </div>
         <router-outlet></router-outlet>
     `,
-    styleUrls: ['./app.component.sass']
+    styleUrls: ['./app.component.sass'],
+    standalone: false
 })
 export class AppComponent {
     constructor(private readonly joyrideService: JoyrideService, private router: Router, private translate: TranslateService) {}

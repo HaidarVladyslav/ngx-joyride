@@ -3,7 +3,8 @@ import { Router } from "@angular/router";
 
 @Component({
     selector: 'info-page',
-    template: `<div joyrideStep="step1" nextStep="app#step4" (prev)="prevClicked()" (next)="goToHome()">Info</div>`
+    template: `<div joyrideStep="step1" nextStep="app#step4" (prev)="prevClicked()" (next)="goToHome()">Info</div>`,
+    standalone: false
 })
 export class InfoComponent {
     constructor(private readonly router: Router) { }

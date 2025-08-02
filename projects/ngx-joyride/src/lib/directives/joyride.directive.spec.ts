@@ -37,7 +37,8 @@ import { TemplatesFakeService } from '../test/fake/templates-fake.service';
                 </div>
             </div>
         </div>
-    `
+    `,
+    standalone: false
 })
 class HostComponent {
     onPrev: jasmine.Spy = jasmine.createSpy('onPrev');
@@ -49,7 +50,8 @@ class HostComponent {
     selector: 'cmp-fixed',
     template: `
         <div style="position: fixed" joyrideStep="myStep" title="Title">Test</div>
-    `
+    `,
+    standalone: false
 })
 class HostComponentFixed {}
 
@@ -57,7 +59,8 @@ class HostComponentFixed {}
     selector: 'cmp-fixed',
     template: `
         <div joyrideStep="myStep" title="Title">Test</div>
-    `
+    `,
+    standalone: false
 })
 class HostComponentNotFixed {}
 

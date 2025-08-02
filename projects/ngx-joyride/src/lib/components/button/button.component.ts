@@ -3,7 +3,8 @@ import { Component, Input, EventEmitter, Output } from "@angular/core";
 @Component({
     selector: 'joyride-button',
     templateUrl: './button.component.html',
-    styleUrls: ['./button.component.scss']
+    styleUrls: ['./button.component.scss'],
+    standalone: false
 })
 export class JoyrideButtonComponent {
     hover: boolean;

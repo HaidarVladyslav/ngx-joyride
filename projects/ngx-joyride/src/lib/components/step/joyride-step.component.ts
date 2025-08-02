@@ -46,7 +46,8 @@ export enum KEY_CODE {
     selector: 'joyride-step',
     templateUrl: './joyride-step.component.html',
     styleUrls: ['./joyride-step.component.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
     stepWidth: number = STEP_MIN_WIDTH;

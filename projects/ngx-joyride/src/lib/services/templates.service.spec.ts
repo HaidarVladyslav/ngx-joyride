@@ -7,7 +7,8 @@ import { Component, TemplateRef, ViewChild } from '@angular/core';
         <div #customComponent>
             <div>My component</div>
         </div>
-    `
+    `,
+    standalone: false
 })
 class CustomComponent {
     @ViewChild('customComponent', { static: true }) template: TemplateRef<any>;

@@ -49,7 +49,8 @@ import { of } from 'rxjs';
         <div #elem>Element</div>
         <div #customTemplate>Template</div>
         <joyride-step></joyride-step>
-    `
+    `,
+    standalone: false
 })
 class HostComponent {
     @ViewChild('elem', { static: true }) element: TemplateRef<any>;

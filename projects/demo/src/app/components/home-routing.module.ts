@@ -33,6 +33,7 @@ import { NgModule, Component } from "@angular/core";
                      {{ step }} of {{ total }} steps
                 </ng-template>
             <div>Route A subtitle</div>`,
+    standalone: false
 })
 export class PageAComponent {
     text = 'Mike';
@@ -40,8 +41,9 @@ export class PageAComponent {
 
 @Component({
     selector: 'sel-b',
-    template:`<div joyrideStep="myStep2" [stepContent]="somecontent" [stepContentParams]="somecontentparams">Route B</div>
-    <ng-template #somecontent let-name="name">Hello {{name}} from dynamic content at Route B</ng-template>`
+    template: `<div joyrideStep="myStep2" [stepContent]="somecontent" [stepContentParams]="somecontentparams">Route B</div>
+    <ng-template #somecontent let-name="name">Hello {{name}} from dynamic content at Route B</ng-template>`,
+    standalone: false
 })
 export class PageBComponent {
     somecontentparams:object = {
