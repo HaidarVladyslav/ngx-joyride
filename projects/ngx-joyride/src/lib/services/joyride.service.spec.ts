@@ -32,9 +32,9 @@ describe('JoyrideService', () => {
     });
 
     beforeEach(() => {
-        joyrideService = TestBed.get(JoyrideService);
-        joyrideStepService = TestBed.get(JoyrideStepService);
-        optionsService = TestBed.get(JoyrideOptionsService);
+        joyrideService = TestBed.inject(JoyrideService);
+        joyrideStepService = TestBed.inject(JoyrideStepService);
+        optionsService = TestBed.inject(JoyrideOptionsService);
 
         tourSubject = new Subject<JoyrideStepInfo>();
         joyrideStepService.startTour.and.returnValue(

@@ -126,11 +126,11 @@ describe('JoyrideStepComponent', () => {
             By.directive(JoyrideStepComponent)
         ).componentInstance;
         childComponent.joyrideStepService = joyrideStepService;
-        stepsContainerService = TestBed.get(JoyrideStepsContainerService);
-        optionsService = TestBed.get(JoyrideOptionsService);
-        documentService = TestBed.get(DocumentService);
-        templatesService = TestBed.get(TemplatesService);
-        logger = TestBed.get(LoggerService);
+        stepsContainerService = TestBed.inject(JoyrideStepsContainerService);
+        optionsService = TestBed.inject(JoyrideOptionsService);
+        documentService = TestBed.inject(DocumentService);
+        templatesService = TestBed.inject(TemplatesService);
+        logger = TestBed.inject(LoggerService);
 
         fixture = TestBed.createComponent(JoyrideStepComponent);
         component = fixture.componentInstance;

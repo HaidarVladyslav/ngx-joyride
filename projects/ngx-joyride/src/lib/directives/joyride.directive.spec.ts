@@ -94,16 +94,16 @@ describe('JorideDirective', () => {
     function initDirective() {
         joyDirectiveDebugElement = fixture.debugElement.query(By.directive(JoyrideDirective));
         joyDirective = joyDirectiveDebugElement.injector.get(JoyrideDirective) as JoyrideDirective;
-        stepContainerService = TestBed.get(JoyrideStepsContainerService);
-        routerService = TestBed.get(Router);
-        domRefService = TestBed.get(DomRefService);
+        stepContainerService = TestBed.inject(JoyrideStepsContainerService);
+        routerService = TestBed.inject(Router);
+        domRefService = TestBed.inject(DomRefService);
         domRefService.getNativeWindow.and.returnValue(FAKE_WINDOW);
     }
 
     beforeEach(() => {
         fixture = TestBed.createComponent(HostComponent);
         hostComponent = fixture.componentInstance;
-        templatesService = TestBed.get(TemplatesService);
+        templatesService = TestBed.inject(TemplatesService);
         initDirective();
     });
 

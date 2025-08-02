@@ -25,7 +25,7 @@ describe('TemplatesService', () => {
         });
     });
     beforeEach(() => {
-        templatesService = TestBed.get(TemplatesService);
+        templatesService = TestBed.inject(TemplatesService);
         let fixture = TestBed.createComponent(CustomComponent);
         component = fixture.componentInstance;
         TEMPLATE = component.template;

@@ -31,9 +31,9 @@ describe('JoyrideStepsContainerService', () => {
     });
 
     beforeEach(() => {
-        joyrideOptionsService = TestBed.get(JoyrideOptionsService);
-        logger = TestBed.get(LoggerService);
-        joyrideStepsContainerService = TestBed.get(
+        joyrideOptionsService = TestBed.inject(JoyrideOptionsService);
+        logger = TestBed.inject(LoggerService);
+        joyrideStepsContainerService = TestBed.inject(
             JoyrideStepsContainerService
         );
     });

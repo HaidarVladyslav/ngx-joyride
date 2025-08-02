@@ -26,9 +26,9 @@ describe('JoyrideBackdropService', () => {
     }));
 
     beforeEach(() => {
-        backdropService = TestBed.get(JoyrideBackdropService);
-        documentService = TestBed.get(DocumentService);
-        optionsService = TestBed.get(DocumentService);
+        backdropService = TestBed.inject(JoyrideBackdropService);
+        documentService = TestBed.inject(DocumentService);
+        optionsService = TestBed.inject(DocumentService);
         STEP = new JoyrideStep();
         ELEM_REF = new FakeElementRef();
 

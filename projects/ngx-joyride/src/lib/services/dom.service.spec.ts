@@ -12,7 +12,7 @@ describe('DomRefService', () => {
     });
 
     beforeEach(() => {
-        domService = TestBed.get(DomRefService);
+        domService = TestBed.inject(DomRefService);
     });
 
     describe('getNativeWindow()', () => {

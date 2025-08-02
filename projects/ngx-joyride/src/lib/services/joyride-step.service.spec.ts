@@ -77,7 +77,7 @@ describe('JoyrideStepService', () => {
     });
 
     beforeEach(() => {
-        domRefService = TestBed.get(DomRefService);
+        domRefService = TestBed.inject(DomRefService);
         FAKE_WINDOW = {
             innerHeight: 200,
             scrollTo: jasmine.createSpy('scrollTo')
@@ -86,15 +86,15 @@ describe('JoyrideStepService', () => {
         domRefService.getNativeWindow.and.returnValue(FAKE_WINDOW);
         domRefService.getNativeDocument.and.returnValue(FAKE_DOCUMENT);
 
-        joyrideStepService = TestBed.get(JoyrideStepService);
-        eventListenerService = TestBed.get(EventListenerService);
-        backdropService = TestBed.get(JoyrideBackdropService);
-        documentService = TestBed.get(DocumentService);
-        stepsContainerService = TestBed.get(JoyrideStepsContainerService);
-        stepDrawerService = TestBed.get(StepDrawerService);
-        logger = TestBed.get(LoggerService);
-        router = TestBed.get(Router);
-        optionsService = TestBed.get(JoyrideOptionsService);
+        joyrideStepService = TestBed.inject(JoyrideStepService);
+        eventListenerService = TestBed.inject(EventListenerService);
+        backdropService = TestBed.inject(JoyrideBackdropService);
+        documentService = TestBed.inject(DocumentService);
+        stepsContainerService = TestBed.inject(JoyrideStepsContainerService);
+        stepDrawerService = TestBed.inject(StepDrawerService);
+        logger = TestBed.inject(LoggerService);
+        router = TestBed.inject(Router);
+        optionsService = TestBed.inject(JoyrideOptionsService);
 
         STEP0 = createNewStep('nav');
         STEP1 = createNewStep('credits');

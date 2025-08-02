@@ -15,8 +15,8 @@ describe('EventListenerService', () => {
     });
 
     beforeEach(() => {
-        eventListenerService = TestBed.get(EventListenerService);
-        domRefService = TestBed.get(DomRefService);
+        eventListenerService = TestBed.inject(EventListenerService);
+        domRefService = TestBed.inject(DomRefService);
         domRefService.getNativeWindow.and.returnValue(window);
     });
 

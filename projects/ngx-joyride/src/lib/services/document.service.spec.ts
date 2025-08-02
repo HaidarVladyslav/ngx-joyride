@@ -33,7 +33,7 @@ describe('DocumentService', () => {
     });
 
     beforeEach(() => {
-        domRefService = TestBed.get(DomRefService);
+        domRefService = TestBed.inject(DomRefService);
         FAKE_DOCUMENT = { body: { scrollHeight: 106 } };
         FAKE_WINDOW = {
             innerHeight: 200,
@@ -57,7 +57,7 @@ describe('DocumentService', () => {
                 }
             });
 
-            documentService = TestBed.get(DocumentService);
+            documentService = TestBed.inject(DocumentService);
 
             expect(documentService.getDocumentHeight()).toBe(50);
         });
@@ -67,7 +67,7 @@ describe('DocumentService', () => {
             document.elementsFromPoint.prototype = undefined;
             expect(document.elementsFromPoint).not.toBeDefined();
 
-            documentService = TestBed.get(DocumentService);
+            documentService = TestBed.inject(DocumentService);
 
             expect(document.elementsFromPoint).toBeDefined();
             expect(document.elementsFromPoint.toString()).toEqual(
@@ -76,7 +76,7 @@ describe('DocumentService', () => {
         });
 
         xit(`should NOT bind elementsFromPoint to document elementsFromPoint if it already exists`, () => {
-            documentService = TestBed.get(DocumentService);
+            documentService = TestBed.inject(DocumentService);
 
             expect(document.elementsFromPoint).toBeDefined();
         });
@@ -84,7 +84,7 @@ describe('DocumentService', () => {
 
     describe('after service initialization', () => {
         beforeEach(() => {
-            documentService = TestBed.get(DocumentService);
+            documentService = TestBed.inject(DocumentService);
         });
 
         describe('getElementFixedTop', () => {

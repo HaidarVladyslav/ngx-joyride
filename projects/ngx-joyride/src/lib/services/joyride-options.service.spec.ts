@@ -17,7 +17,7 @@ describe('JoyrideOptionsService', () => {
     });
 
     beforeEach(() => {
-        optionsService = TestBed.get(JoyrideOptionsService);
+        optionsService = TestBed.inject(JoyrideOptionsService);
     });
 
     describe('setOptions', () => {

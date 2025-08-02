@@ -78,8 +78,8 @@ describe("StepDrawerService", () => {
     });
 
     beforeEach(() => {
-        stepDrawerService = TestBed.get(StepDrawerService);
-        appRef = TestBed.get(ApplicationRef);
+        stepDrawerService = TestBed.inject(StepDrawerService);
+        appRef = TestBed.inject(ApplicationRef);
     });
 
     describe('draw', () => {

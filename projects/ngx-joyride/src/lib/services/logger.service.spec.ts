@@ -20,8 +20,8 @@ describe("LoggerService", () => {
     })
 
     beforeEach(() => {
-        loggerService = TestBed.get(LoggerService);
-        optionsService = TestBed.get(JoyrideOptionsService);
+        loggerService = TestBed.inject(LoggerService);
+        optionsService = TestBed.inject(JoyrideOptionsService);
 
         consoleInfoSpy = spyOn(console, 'info');
         consoleDebugSpy = spyOn(console, 'debug');
